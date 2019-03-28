@@ -4,8 +4,7 @@ pipeline {
 	    stage('Build stage') {
 		    steps {
 			    withMaven(maven : 'M2_HOME' ) {
-				    dir('/root/MavenProjects/simple-app/src/main/java/com/home/app')
-				    sh 'mvn clean compile'
+				    sh 'mvn -f /root/MavenProjects/simple-app/pom.xml clean compile'
 
 					}
             }
