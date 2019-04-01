@@ -13,7 +13,7 @@ pipeline {
 		stage('Archive') {
 			steps {
 				withMaven(maven : 'M2_HOME' ) {
-					sh 'mvn -f /root/MavenProjects/simple-app/pom.xml install'
+					sh 'mvn -f /root/MavenProjects/simple-app/pom.xml deploy'
 					
 				}
 			}
